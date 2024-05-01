@@ -2,6 +2,15 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String [] args) {
+
+        int fechaDeLanzamiento = 1999;
+        int numeroDeResenhas = 0;
+        double notaResenhas = 0;
+        double evaluacionMedia = 0;
+        double calificaciones = 0;
+        double i = 0;
+        boolean planBasico = true;
+        boolean buscando = false;
         String nombre = "Matrix";
         String sinopsis = """
                 Matrix es una película que narra la aventura de Neo,
@@ -10,19 +19,12 @@ public class Main {
                 Morfeo le ofrece dos pastillas de diferentes colores:
                 con una continuará en la ilusión y con otra descubrirá la verdad.
                 """;
-        int fechaDeLanzamiento = 1999;
-        int numeroDeResenhas = 0;
-        double evaluacionMedia = 0;
-        double calificaciones = 0;
-        double i = 0;
-
-        boolean planBasico = true;
 
         Scanner teclado = new Scanner(System.in);
         System.out.println("Ingresa el nombre de la pelicula a evaluar: ");
         String buscarPelicula = teclado.nextLine();
 
-        boolean buscando = nombre.equalsIgnoreCase(buscarPelicula);
+        buscando = nombre.equalsIgnoreCase(buscarPelicula);
 
         if (buscando && planBasico){
 
@@ -35,7 +37,7 @@ public class Main {
                 Scanner ciclo = new Scanner(System.in);
                 calificaciones = ciclo.nextDouble();
                 if (calificaciones >=0 && calificaciones<=5){
-                    evaluacionMedia = evaluacionMedia + calificaciones;
+                    notaResenhas = notaResenhas + calificaciones;
                     numeroDeResenhas++;
 
                 } else if (calificaciones>0){
@@ -46,8 +48,18 @@ public class Main {
                 }
             }
 
+            evaluacionMedia = notaResenhas / numeroDeResenhas;
 
-            System.out.println("La media de la pelicula " + nombre + " es: " + evaluacionMedia/numeroDeResenhas);
+            System.out.println("La media de la pelicula " + nombre + " es: " + evaluacionMedia + " estrellas.");
+
+            System.out.println("Cantidad de reseñas: " + numeroDeResenhas);
+            if (evaluacionMedia == 5){
+                System.out.println("Clasificada como: EXCELENTE!");
+            } else if (evaluacionMedia <5 && evaluacionMedia >=3) {
+                System.out.println("Clasificada como: RECOMENDADA!");
+            } else {
+                System.out.println("Clasificada como: NO RECOMENDAD!");
+            }
 
         } else {
             System.out.println("La pelicula que buscas no esta disponible o no esta incluida en tu plan.");
