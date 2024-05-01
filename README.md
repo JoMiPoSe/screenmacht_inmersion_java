@@ -1,5 +1,5 @@
 Explora y califica tus peliculas vistas en screenmacht donde podras:
-![Uploading Busqueda screenmacht ‐ Hecho con Clipchamp.gif…]()
+(https://github.com/JoMiPoSe/screenmacht_inmersion_java/assets/131287442/29c990ca-c984-4878-a5fd-638447415a58)
 Buscar la pelicula que quieres reseñar
 
 Retroalimentar tu conocimiento con una sinopsis corta pero concreta.
