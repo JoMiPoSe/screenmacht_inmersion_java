@@ -4,14 +4,14 @@ public class Main {
     public static void main(String [] args) {
 
         int fechaDeLanzamiento = 1999;
-        int numeroDeResenhas = 0;
-        double notaResenhas = 0;
-        double evaluacionMedia = 0;
-        double calificaciones = 0;
-        double i = 0;
-        boolean planBasico = true;
-        boolean buscando = false;
-        String nombre = "Matrix";
+        int numeroDeResenhas = 0; // Conocer cuantas notas se hicieron
+        double notaResenhas = 0; // Notas dadas por cada reseña
+        double evaluacionMedia = 0; // La media de las notas
+        double calificaciones = 0; //
+        double i = 0; // Detonante del ciclo while
+        boolean planBasico = true; // Conocer si puede ser vista, pendiente de modificar.
+        boolean buscando = false; // Para buscar la pelicula a calificar, pendiente de modificar.
+        String nombre = "Matrix"; // Nombres de peliculas, pediente de modificar
         String sinopsis = """
                 Matrix es una película que narra la aventura de Neo,
                 un joven hacker que es convocado por el movimiento de resistencia liderado por Morfeo,
